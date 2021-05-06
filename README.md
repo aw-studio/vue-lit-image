@@ -13,7 +13,7 @@ For normal websites built with blade in Laravel we already have the `<x-lit-imag
 In your app.js require the package and use the component. When using the component you have to specify the conversions according to your settings in the lit.php config file:
 
 ```
-require('@aw-studio/vue-lit-image');
+import LitImage from '@aw-studio/vue-lit-image';
 
 Vue.use(LitImage, {
     conversions: {
