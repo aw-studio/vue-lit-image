@@ -34,5 +34,5 @@ Inside your Vue files when you want to use the vue-lit-image, you want to give t
 You can also style it using the `classes`prop:
 
 ```
-<lit-image :image="image" :classes="w-full" />
+<lit-image :image="image" classes="w-full" />
 ```
