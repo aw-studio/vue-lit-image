@@ -7,6 +7,10 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "Christian Zellier",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/aw-studio/vue-lit-image.git"
+    },
     "license": "ISC",
     "dependencies": {
         "lazysizes": "^5.3.2"
