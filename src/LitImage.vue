@@ -114,10 +114,18 @@ export default {
         },
         title() {
             if (this.locale == 'de') {
-                return this.image.custom_properties.de?.title;
+                return (
+                    this.image.custom_properties.de?.title ??
+                    this.image.custom_properties.title ??
+                    ''
+                );
             }
             if (this.locale == 'en') {
-                return this.image.custom_properties.en?.title;
+                return (
+                    this.image.custom_properties.en?.title ??
+                    this.image.custom_properties.title ??
+                    ''
+                );
             }
             return this.image.custom_properties.title ?? '';
         },
