@@ -2,7 +2,7 @@
 
 ## what is this?
 
-For normal websites built with blade in Laravel we already have the `<x-lit-image />`als a component to handle all the annoying tasks for images like lazyloading but what if you have the same imageobjects in a vue application and want to use the same magic there? The vue-lit-image has you covered, it also takes the media object in the image property and does all the lazyloading, dynamic image sizing and it even sets the alt and title attributes for you.
+For normal websites built with blade in Laravel we already have the `<x-lit-image />` as a component to handle all the annoying tasks for images like lazyloading but what if you have the same imageobjects in a vue application and want to use the same magic there? The vue-lit-image has you covered, it also takes the media object in the image property and does all the lazyloading, dynamic image sizing and it even sets the alt and title attributes for you.
 
 ## installation
 
@@ -31,7 +31,7 @@ Inside your Vue files when you want to use the vue-lit-image, you want to give t
 <lit-image :image="image" />
 ```
 
-You can also style it using the `classes`prop:
+You can also style it using the `classes` prop:
 
 ```
 <lit-image :image="image" classes="w-full" />

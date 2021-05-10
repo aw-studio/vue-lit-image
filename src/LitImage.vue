@@ -97,10 +97,18 @@ export default {
         },
         alt() {
             if (this.locale == 'de') {
-                return this.image.custom_properties.de?.alt;
+                return (
+                    this.image.custom_properties.de?.alt ??
+                    this.image.custom_properties.alt ??
+                    ''
+                );
             }
             if (this.locale == 'en') {
-                return this.image.custom_properties.en?.alt;
+                return (
+                    this.image.custom_properties.en?.alt ??
+                    this.image.custom_properties.alt ??
+                    ''
+                );
             }
             return this.image.custom_properties.alt ?? '';
         },
