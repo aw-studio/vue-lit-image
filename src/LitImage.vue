@@ -97,15 +97,21 @@ export default {
         },
         alt() {
             if (this.locale == 'de') {
-                return this.image.custom_properties.de.alt;
+                return this.image.custom_properties.de?.alt;
             }
-            return this.image.custom_properties.en.alt ?? '';
+            if (this.locale == 'en') {
+                return this.image.custom_properties.en?.alt;
+            }
+            return this.image.custom_properties.alt ?? '';
         },
         title() {
-            if (window.location.pathname.split('/')[1] == 'de') {
-                return this.image.custom_properties.de.title;
+            if (this.locale == 'de') {
+                return this.image.custom_properties.de?.title;
             }
-            return this.image.custom_properties.en.title ?? '';
+            if (this.locale == 'en') {
+                return this.image.custom_properties.en?.title;
+            }
+            return this.image.custom_properties.title ?? '';
         },
         imageSrc() {
             if (this.getMediaConversions().length) {
