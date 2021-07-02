@@ -42,11 +42,7 @@ export default {
         getMediaConversions() {
             let imageConversions = [];
 
-            const sortable = Object.fromEntries(
-                Object.entries(this.conversionSizes).sort(
-                    ([, a], [, b]) => a - b
-                )
-            );
+            const sortable = Object.fromEntries(Object.entries(this.conversionSizes).sort(([, a], [, b]) => a - b));
             for (const [key, value] of Object.entries(sortable)) {
                 imageConversions.push([key, value]);
             }
@@ -61,9 +57,7 @@ export default {
             const conversion = this.getMediaConversions()[0][0];
             let url = null;
 
-            for (const [key, value] of Object.entries(
-                this.image.conversion_urls
-            )) {
+            for (const [key, value] of Object.entries(this.image.conversion_urls)) {
                 if (key == conversion) {
                     url = value;
                 }
@@ -97,35 +91,19 @@ export default {
         },
         alt() {
             if (this.locale == 'de') {
-                return (
-                    this.image.custom_properties.de?.alt ??
-                    this.image.custom_properties.alt ??
-                    ''
-                );
+                return this.image.custom_properties.de?.alt ?? this.image.custom_properties.alt ?? '';
             }
             if (this.locale == 'en') {
-                return (
-                    this.image.custom_properties.en?.alt ??
-                    this.image.custom_properties.alt ??
-                    ''
-                );
+                return this.image.custom_properties.en?.alt ?? this.image.custom_properties.alt ?? '';
             }
             return this.image.custom_properties.alt ?? '';
         },
         title() {
             if (this.locale == 'de') {
-                return (
-                    this.image.custom_properties.de?.title ??
-                    this.image.custom_properties.title ??
-                    ''
-                );
+                return this.image.custom_properties.de?.title ?? this.image.custom_properties.title ?? '';
             }
             if (this.locale == 'en') {
-                return (
-                    this.image.custom_properties.en?.title ??
-                    this.image.custom_properties.title ??
-                    ''
-                );
+                return this.image.custom_properties.en?.title ?? this.image.custom_properties.title ?? '';
             }
             return this.image.custom_properties.title ?? '';
         },
@@ -140,9 +118,7 @@ export default {
             const conversions = this.getMediaConversions();
             // console.log(conversions);
             let urls = [];
-            for (const [key, value] of Object.entries(
-                this.image.conversion_urls
-            )) {
+            for (const [key, value] of Object.entries(this.image.conversion_urls)) {
                 if (key in this.conversionSizes) {
                     urls.push([key, value]);
                 }
