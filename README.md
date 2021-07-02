@@ -12,7 +12,7 @@ For normal websites built with blade in Laravel we already have the `<x-lit-imag
 
 In your app.js require the package and use the component. When using the component you have to specify the conversions according to your settings in the lit.php config file:
 
-```
+```js
 import LitImage from '@aw-studio/vue-lit-image';
 
 Vue.use(LitImage, {
@@ -27,12 +27,12 @@ Vue.use(LitImage, {
 
 Inside your Vue files when you want to use the vue-lit-image, you want to give the prop `image` the media object just like the blade component would:
 
-```
+```vue
 <lit-image :image="image" />
 ```
 
 You can also style it using the `classes` prop:
 
-```
+```vue
 <lit-image :image="image" classes="w-full" />
 ```
