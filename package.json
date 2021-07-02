@@ -1,6 +1,6 @@
 {
     "name": "@aw-studio/vue-lit-image",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "description": "Vue Component for lazyloading images",
     "main": "src/index.js",
     "scripts": {
