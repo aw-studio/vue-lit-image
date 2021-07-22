@@ -2,9 +2,9 @@ import LitImage from './LitImage.vue';
 import 'lazysizes';
 
 export default {
-    install(Vue, options) {
-        Vue.prototype.$litImageOptions = options;
+    install(app, options) {
+        app.config.globalProperties.$litImageOptions = options;
 
-        Vue.component('lit-image', LitImage);
+        app.component('lit-image', LitImage);
     },
 };
